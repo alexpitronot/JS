@@ -15,13 +15,13 @@ body {
 }
 
 /* Remove margins and padding from the list */
-ul {
+ol {
   margin: 0;
   padding: 0;
 }
 
 /* Style the list items */
-ul li {
+ol li {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
@@ -38,24 +38,24 @@ ul li {
 }
 
 /* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
+ol li:nth-child(odd) {
   background: #f9f9f9;
 }
 
 /* Darker background-color on hover */
-ul li:hover {
+ol li:hover {
   background: #ddd;
 }
 
 /* When clicked on, add a background color and strike out text */
-ul li.checked {
+ol li.checked {
   background: #888;
   color: #fff;
   text-decoration: line-through;
 }
 
 /* Add a "checked" mark when clicked on */
-ul li.checked::before {
+ol li.checked::before {
   content: '';
   position: absolute;
   border-color: #fff;
@@ -134,14 +134,14 @@ input {
   <span onclick="newElement()" class="addBtn">Add</span>
 </div>
 
-<ul id="myUL">
+<ol id="myUL">
   <li>Make lessons</li>
   <li class="checked">Lesson example</li>
   <li>Meet John</li>
   <li>Buy computer</li>
   <li>Read a book</li>
   <li>Organize office</li>
-</ul>
+</ol>
 
 <script>
 // Create a "close" button and append it to each list item
@@ -166,7 +166,7 @@ for (i = 0; i < close.length; i++) {
 }
 
 // Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
+var list = document.querySelector('ol');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
     ev.target.classList.toggle('checked');
