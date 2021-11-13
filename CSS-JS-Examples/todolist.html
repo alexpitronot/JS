@@ -181,8 +181,9 @@ function newElement() {
   li.appendChild(t);
   if (inputValue === '') {
     alert("You must write something!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
+  } else {     
+    document.getElementById("myUL").insertBefore(li, document.getElementById("myUL").firstChild);
+    //document.getElementById("myUL").appendChild(li);
   }
   document.getElementById("myInput").value = "";
 
